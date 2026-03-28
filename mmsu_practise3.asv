@@ -1,0 +1,42 @@
+%post office with lunch queue
+%arrivals
+  % first 20 minutes - every 8 minutes 
+  % last 20 minutes - every 2 minutes
+
+%settings
+tMax = 40;
+c = 2;
+serviceTime = 5;
+
+inf = intmax;
+
+%init
+t = 0;
+l = 0;
+ta = 8;
+arrayXs = [0, 0];
+calendar = [ta, inf, inf];
+
+while t < tMax
+    [minCalendarValue, type] = min(calendar);
+    t = minCalendarValue;
+    
+    if type == 1 %arrival
+        l = l + 1;
+        if t <= 20
+            ta = ta + 8;
+        else
+            ta = ta + 2;
+        end
+        calendar(1) = ta;
+        
+        if l 
+            
+        else
+            
+        end
+
+    else %type = 2,3 => leave
+        
+    end
+end
