@@ -26,7 +26,7 @@ while t < tMax
         if l <= c %if the service is available
             serviceFreeIndex = find(arrayXs == 0, 1);
             arrayXs(freeServiceIndex) = 1;
-            randomInt = randi(1);
+            randomInt = rand(1);
             if randomInt <= 0.6
                 calendar(freeServiceIndex + 1) = t + serviceTimeCap;
             else
