@@ -23,7 +23,7 @@ while t < tMax
     if type == 1 %arrival
         l = l + 1;
         if t <= 240
-            randomArrival = random(normalDis, 1, 1);
+            matlab Arrival = random(normalDis, 1, 1);
             ta = ta + randomArrival;
         elseif t > 240 && t <= 480
             randomArrival = random(triangularDis, 1, 1);

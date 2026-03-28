@@ -17,7 +17,7 @@ calendar = [ta, inf, inf];
 
 while t < tMax 
     [minCalendarValue, type] = min(calendar);
-    t = ta;
+    t = minCalendarValue;
 
     if type == 1 %arrival
         l = l + 1;
@@ -41,7 +41,7 @@ while t < tMax
         indexOfServiceInCalendar = type;
         if l >= c
             arrayXs(indexOfServiceInCalendar - 1) = 1;
-            randomInt = randi(1);
+            randomInt = rand(1);
             if randomInt <= 0.6
                 calendar(indexOfServiceInCalendar) = t + serviceTimeCap;
             else
